@@ -1,26 +1,45 @@
 # API de Productos
 
-API REST básica desarrollada con Java y Spring Boot como parte de la actividad de la Unidad 1.
-
 ## Descripción
 
-La API permite realizar operaciones básicas relacionadas con productos y demuestra el uso de endpoints REST, métodos HTTP, parámetros, intercambio de información mediante JSON, DTO y respuestas HTTP.
+API REST desarrollada para la gestión de productos mediante operaciones CRUD
+(Create, Read, Update y Delete).
 
-El proyecto utiliza el contexto de productos como recurso principal.
+La aplicación permite registrar, consultar, actualizar y eliminar productos,
+además de realizar una consulta personalizada por categoría.
+
+## Contexto
+
+Este proyecto fue desarrollado como parte de la Actividad Colaborativa #2,
+con el propósito de implementar una API REST utilizando Spring Boot,
+JPA e Hibernate, incorporando persistencia de datos mediante una base de
+datos H2.
+
+## Autor
+
+José Arboleda
 
 ## Tecnologías utilizadas
 
 - Java 17
 - Spring Boot
-- Maven
 - Spring Web
-- Thunder Client para pruebas de los endpoints
+- Spring Data JPA
+- Hibernate
+- H2 Database
+- Maven
+- Thunder Client
+- Git y GitHub
 
-## Endpoints
-
-### 1. Listar productos
-
-**Método:** GET
+## Estructura del proyecto
 
 ```text
-GET http://localhost:8080/productos
+src/main/java/com/medcontrol/api_productos/
+├── controller/
+│   └── ProductoController.java
+├── dto/
+│   └── ProductoDTO.java
+├── entity/
+│   └── Producto.java
+└── repository/
+    └── ProductoRepository.java
